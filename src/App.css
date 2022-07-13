@@ -1,31 +1,83 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  text-align: center;  
+  background: linear-gradient(to right, #4e5a47, #0d5577);
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-logo {
+  height: 45vmin;
+  pointer-events: none;
+}
+
+.help {
+  position: absolute;
+  bottom: 1;
+  right: 5;
+  left: 5;
+  display: inline-block;
+  text-align: center;
+  align-self: flex-end;
+  justify-self: center;
+  height: 4vh;
+  width: 4vw;
+  margin-bottom: 2vh;
+}
+
+.textSubmit {
+  display: inline-block;
+  color: black;
+  position: absolute;
+  right: 0;
+  margin-right: 15vh;
+  margin-bottom: 2vh;
+  display: inline-block;
+  text-align: center;
+  align-self: flex-end;
+  justify-self: flex-end;
+  height: 4vh;
+  width: 7vw;
+  border: 2px solid black;
+}
+
+.helpContent {
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+  width: 20vw;
+  height: 20vh;
+  position: absolute;
+  bottom: 0;
+  right: 49%;
+  left: 51%;
+  text-align: center;
+  margin-bottom: 3vh;
+  background: rgba(255, 255, 255, 0.174);
+  z-index: 1;
+  border: 1px solid black;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .centerContent {
+    animation: App-logo-spin infinite 20s linear;
+  }
+
+  .headerText {
+    animation: header-text-spin infinite 5s linear;
+  }
+}
+
+.headerText {
+  color: white;
+  font-size: 5vh;
+  font-style: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +87,101 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes header-text-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.chatButton {
+  color: black;
+  position: absolute;
+  right: 0;
+  margin-right: 15vh;
+  margin-bottom: 2vh;
+  display: inline-block;
+  text-align: center;
+  align-self: flex-end;
+  justify-self: flex-end;
+  height: 4vh;
+  width: 7vw;
+  border: 2px solid black;
+}
+
+.chathist {
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
+  right: 0;
+  border-radius: 20px;
+  width: 20vw;
+  height: 80vh;
+  margin-right: 3vh;
+  position: absolute;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.174);
+  z-index: 1;
+}
+
+.talkAidar {
+  margin-top: 1vh;
+}
+
+.mapim {
+  margin-top: 2vh;
+  height: 60vh;
+  width: 96%;
+  display: inline-block;
+  text-align: left;
+  overflow-y: scroll;
+}
+
+.mapim::-webkit-scrollbar {
+  width: 0px;
+}
+
+.mapElems {
+  text-align: left;
+  color: white;
+}
+
+.mapElems:nth-child(even) {
+  color: black;
+}
+
+form {
+  width: 100%;
+  height: 6.7vh;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  top: 5vh;
+}
+
+.input {
+  height: 100%;
+  width: 100%;
+  background: none;
+  outline: none;  
+  font-size: 2rem;
+  overflow: hidden;
+  border: none;
+}
+
+
+textarea:focus, .input:focus {
+  border: none;
+  outline: none;
 }
